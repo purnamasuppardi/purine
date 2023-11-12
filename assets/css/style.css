@@ -1,3 +1,185 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&family=Noto+Sans+KR&display=swap');
 
 /* -------------- ROOT VARIABLES -------------- */
+:root {
+    --background-color: #EDA58B;
+    --background-color-dark: #f0887a;
+    --list-color: #FFCBC4;
+    --text-color: #fff;
+}
+
+/* -------------- FONT -------------- */
+@font-face {
+    font-family: 'BrittanySignature';
+    src: url(../font/BrittanySignature.ttf);
+}
+
+@font-face {
+    font-family: 'Bertany';
+    src: url(../font/Bertany.ttf);
+}
+
+.navbar ul.navbar-nav li.nav-item {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-right: 30px;
+}
+
+.navbar ul.navbar-nav li.nav-item:hover {
+    border-bottom: solid 5px var(--list-color);
+}
+
+.navbar ul.navbar-nav li.nav-item.active {
+    border-bottom: solid 5px var(--list-color);
+}
+
+/* Scroll top */
+.scrolltop {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    transform: rotate(-45deg);
+    background: var(--list-color);
+    z-index: var(--z-tooltip);
+    transition: .4s;
+    visibility: hidden;
+    text-decoration: none;
+    color: var(--text-color-2);
+}
+
+.scrolltop::after {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: var(--list-color);
+    top: -25px;
+    left: 0;
+    content: "";
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.scrolltop::before {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: var(--list-color);
+    top: 0;
+    left: 25px;
+    content: "";
+    border-radius: 50%;
+}
+
+.scrolltop:hover {
+    color: var(--text-color);
+}
+
+.scrolltop i {
+    font-size: 1.3rem;
+    transform: rotate(45deg);
+    position: absolute;
+    display: flex;
+    left: 10px;
+    top: 15px;
+    right: 0;
+    bottom: 0;
+}
+
+/* Show scrolltop */
+.show-scroll {
+    visibility: visible;
+    bottom: 1.5rem;
+}
+
+#home {
+    background-image: url(../img/bg/Background\ -\ Copy.JPG);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+
+#home::before {
+    background-color: rgba(0, 0, 0, 0.67);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+#home img {
+    width: 100%;
+    position: absolute;
+    top: -50px;
+}
+
+#home div.title {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: var(--text-color);
+}
+
+#home div.title h1 {
+    font-family: 'BrittanySignature', sans-serif;
+    font-size: 8rem;
+}
+
+#home div.title h2 {
+    font-family: 'Bertany', serif;
+    font-size: 10rem;
+}
+
+#home a {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    position: absolute;
+    padding: 15px;
+    width: 300px;
+    bottom: 80px;
+}
+
+#home a:hover {
+    background-color: var(--background-color-dark);
+}
+
+.heart-rate img {
+    width: 500px;
+    position: absolute;
+    display: block;
+}
+
+#journey {
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+/* -------------- MEDIA QUERY -------------- */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+/* X-Large devices (desktops, more than 1200px) */
+@media (min-width: 1200px) {}
